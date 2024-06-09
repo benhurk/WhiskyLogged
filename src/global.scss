@@ -1,0 +1,34 @@
+:root {
+    //Colors
+    --light-orange: #FB8B24;
+    --dark: #171617;
+    --gold: #FFD700;
+
+    //Fonts
+    --main-font: "Sedan SC", serif;
+    --title-font: "Lobster Two";
+}
+
+body {
+    font-family: var(--main-font);
+    color: #fff;
+    background-color: var(--dark);
+}
+
+//Resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+//Container
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+}
