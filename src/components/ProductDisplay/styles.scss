@@ -1,0 +1,128 @@
+.product_display {
+    &__rating {
+        position: relative;
+        width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 2.5rem;
+
+        .bi {
+            color: var(--gold);
+            pointer-events: none;
+            
+            &:not(:first-of-type) {
+                margin-left: 0.2rem;
+            }
+        }
+
+        &--main {
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 125%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                border-top: 0.6rem solid #fff;
+                border-left: .4rem solid transparent;
+                border-right: .4rem solid transparent;
+                opacity: 1;
+                transition: 0.15s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    
+        &--sub {
+            position: absolute;
+            width: max-content;
+            top: 125%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-top: 2px solid #fff;
+            padding: 0.5rem;
+            clip-path: inset(0 100% 0 0);
+            transition: 0.25s ease-in-out;
+
+            &.open {
+                clip-path: inset(0 0 0 0);
+            }
+
+            &_item {
+                opacity: 1;
+                z-index: 1;
+                &:not(:first-of-type) {
+                    margin-top: 0.5rem;
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                opacity: .7;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        &-image {
+            img {
+                height: 360px;
+                width: auto;
+                pointer-events: none;
+            }
+        }
+
+        &-info {
+            width: 160px;
+            height: fit-content;
+            margin-block: auto;
+
+            &:nth-of-type(1) {
+                text-align: right;
+            }
+
+            &--main {
+                font-size: 1.1rem;
+                border-bottom: 1px solid #fff;
+                text-transform: uppercase;
+                margin-bottom: 0.3rem;
+                letter-spacing: 0.1rem;
+                cursor: default;
+            }
+
+            &--sub {
+                font-size: 0.9rem;
+            }
+
+            ul {
+                opacity: .7;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:nth-of-type(1) {
+                    margin-bottom: 1.4rem;
+                }
+            }
+        }
+    }
+}

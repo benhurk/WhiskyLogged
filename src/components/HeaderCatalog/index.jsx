@@ -1,19 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import './styles.scss';
 
-export default function HeaderCatalog({ height }) {
-    const [products, setProducts] = useState([]);
+export default function HeaderCatalog({ products, setCurrentProduct, currentProduct }) {
     const [searchFor, setSearchFor] = useState('');
     const [typeFilter, setTypeFilter] = useState('');
     const inputRef = useRef();
     const wraperRef = useRef();
-
-    useEffect(() => {
-        fetch('./catalog.json')
-            .then(res => res.json())
-            .then(catalog => setProducts(catalog))
-            .catch(err => console.error(err))
-    }, []);
 
     const handleInput = (e) => {    setSearchFor(e.target.value);   }
 
@@ -62,7 +54,7 @@ export default function HeaderCatalog({ height }) {
                     {searchedProducts.length > 0
                         ?
                         searchedProducts.map(item => (
-                            <div key={item.name} className='header_catalog__products-item'>
+                            <div key={item.name} data-name={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`} onClick={setCurrentProduct}>
                                 <img src={item.img} alt="Product Image" />
                                 <div className='header_catalog__products-item_name'>
                                     <h3 className='header_catalog__products-item_name-main'>{item.name.split(' - ')[0]}</h3>

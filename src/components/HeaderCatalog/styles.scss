@@ -2,7 +2,6 @@
     position: relative;
     border-bottom: 0.1rem solid var(--light-orange);
     background-color: var(--dark);
-    margin-bottom: 1rem;
 
     &__options {
         width: fit-content;
@@ -127,6 +126,10 @@
             opacity: .6;
             transition: 0.2s ease-in-out;
 
+            &.current {
+                opacity: 1;
+            }
+
             &:hover {
                 color: var(--beige);
                 opacity: 1;
@@ -143,6 +146,7 @@
 
             &_name {
                 height: 30%;
+                pointer-events: none;
 
                 &-main {
                     font-size: 0.8rem;

@@ -6,17 +6,13 @@
         "abv": "40%",
         "age": "NAS",
         "img": "./src/assets/img/GlenlivetCaribbean.webp",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris ex-rum. Não especificado os tipos nem o tempo de cada barril.",
-            "chillFiltered": true,
-            "naturalColor": false
-        },
+        "picture": "./src/assets/img/GlenlivetCaribbean_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Frutado e doce.",
             "palate": "Suavemente doce, seguido de frutas tropicais, destaca-se melão e banana um pouco verde, finaliza muito frutado com um leve cítrico.",
-            "strength": "Bem suave, indicado para iniciantes. Apesar de ser um whisky jovem, a percepção de álcool é bem baixa."
+            "description": "Bem suave, indicado para iniciantes. Apesar de ser um whisky jovem, a percepção de álcool é bem baixa."
         },
 
         "rating": {
@@ -33,17 +29,13 @@
         "abv": "40%",
         "age": "NAS",
         "img": "./src/assets/img/LaphroaigSelect.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/LaphroaigSelect_Content.webp",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -60,17 +52,13 @@
         "abv": "45.8%",
         "age": "10 anos",
         "img": "./src/assets/img/Talisker10.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/Talisker10_Content.webp",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -87,17 +75,13 @@
         "abv": "46%",
         "age": "12 anos",
         "img": "./src/assets/img/Glenallachie12.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/Glenallachie12_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -114,17 +98,13 @@
         "abv": "46%",
         "age": "NAS",
         "img": "./src/assets/img/DeanstonVirginOak.webp",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/DeanstonVirginOak_Content.webp",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -141,17 +121,13 @@
         "abv": "46%",
         "age": "NAS",
         "img": "./src/assets/img/EagleRare10.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/EagleRare10_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -168,17 +144,13 @@
         "abv": "46%",
         "age": "NAS",
         "img": "./src/assets/img/ChivasExtra13.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/ChivasExtra13_Content.webp",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -195,23 +167,19 @@
         "abv": "40%",
         "age": "NAS",
         "img": "./src/assets/img/JohnnieWalkerDoubleBlack.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/JohnnieWalkerDoubleBlack_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
-            "nose": 4.0,
-            "palate": 4.5,
-            "cost": 4.0
+            "nose": 1.0,
+            "palate": 2.0,
+            "cost": 1.0
         }
     },
 
@@ -222,17 +190,13 @@
         "abv": "40%",
         "age": "12 anos",
         "img": "./src/assets/img/SingletonDufftown12.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/SingletonDufftown12_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
@@ -249,17 +213,13 @@
         "abv": "40%",
         "age": "17 anos",
         "img": "./src/assets/img/Ballantines17.png",
-
-        "info": {
-            "aging": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-            "chillFiltered": false,
-            "naturalColor": true
-        },
+        "picture": "./src/assets/img/Ballantines17_Content.jpg",
+        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
             "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "strength": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
         },
 
         "rating": {
