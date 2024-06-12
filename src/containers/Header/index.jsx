@@ -5,7 +5,9 @@ export default function Header({ getProducts, selectCurrentProduct, getCurrentPr
     return (
         <header className='header'>
             <h1 className='header_brand'>My<strong>Whisky</strong>Space</h1>
-            <HeaderCatalog products={getProducts} setCurrentProduct={selectCurrentProduct} currentProduct={getCurrentProduct} />
+            <div className='container'>
+                <HeaderCatalog products={getProducts} setCurrentProduct={selectCurrentProduct} currentProduct={getCurrentProduct} />
+            </div>
         </header>
     )
 }

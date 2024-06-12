@@ -18,12 +18,16 @@ export default function ProductContent({ currentProduct }) {
                         <h3 className='product_content__inner-text--title'>Sabores e Aromas</h3>
                         <p className='product_content__inner-text--p'>{currentProduct.taste.description}</p>
                         <div className='product_content__inner-text_sub'>
-                            <h4 className='product_content__inner-text_sub--title'>Olfato:</h4>
-                            <p className='product_content__inner-text_sub--p'>{currentProduct.taste.nose}</p>
+                            <p className='product_content__inner-text_sub--p'>
+                                <strong className='product_content__inner-text_sub--p_title'>Olfato:</strong>
+                                {currentProduct.taste.nose}
+                            </p>
                         </div>
                         <div className='product_content__inner-text_sub'>
-                            <h4 className='product_content__inner-text_sub--title'>Paladar:</h4>
-                            <p className='product_content__inner-text_sub--p'>{currentProduct.taste.palate}</p>
+                            <p className='product_content__inner-text_sub--p'>
+                                <strong className='product_content__inner-text_sub--p_title'>Paladar:</strong>
+                                {currentProduct.taste.palate}
+                            </p>
                         </div>
                     </div>
                 </div>

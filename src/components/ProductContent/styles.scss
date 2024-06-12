@@ -1,5 +1,5 @@
 .product_content {
-    padding-top: 5%;
+    padding-top: 2.5rem;
     padding-bottom: 5%;
 
     &--title {
@@ -9,10 +9,12 @@
     }
 
     &__inner {
+        position: relative;
         display: grid;
         grid-template-columns: 320px 1fr;
         gap: 2rem;
-        overflow: hidden;
+        background-color: whitesmoke;
+        height: 500px;
         
         &_img {
             width: 100%;
@@ -20,7 +22,7 @@
 
             img {
                 width: 100%;
-                max-height: 320px;
+                height: 100%;
                 object-fit: cover;
             }
         }
@@ -34,34 +36,35 @@
             }
 
             &--title {
+                color: var(--theme-color);
                 font-size: 1.3rem;
                 font-weight: 300;
                 letter-spacing: 0.1rem;
                 display: inline-block;
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid #000;
                 margin-bottom: 0.2rem;
             }
 
             &--p {
                 font-size: 1rem;
                 letter-spacing: 0.05rem;
-                color: wheat;
+                color: #000;
             }
 
             &_sub {
-                display: flex;
-                gap: 0.5rem;
                 margin-top: 1rem;
 
-                &--title {
-                    font-size: 1.1rem;
-                    font-weight: 300;
-                    letter-spacing: 0.1rem;
-                }
-
                 &--p {
+                    color: #000;
                     letter-spacing: 0.05rem;
-                    color: wheat;
+                    align-self: flex-end;
+
+                    &_title {
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        letter-spacing: 0.1rem;
+                        margin-right: 0.2rem;
+                    }
                 }
             }
         }

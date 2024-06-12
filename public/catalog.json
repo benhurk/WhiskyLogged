@@ -8,6 +8,7 @@
         "img": "./src/assets/img/GlenlivetCaribbean.webp",
         "picture": "./src/assets/img/GlenlivetCaribbean_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#ff603d",
 
         "taste": {
             "nose": "Frutado e doce.",
@@ -31,6 +32,7 @@
         "img": "./src/assets/img/LaphroaigSelect.png",
         "picture": "./src/assets/img/LaphroaigSelect_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#58be02",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -54,6 +56,7 @@
         "img": "./src/assets/img/Talisker10.png",
         "picture": "./src/assets/img/Talisker10_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#5a88c4",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -77,6 +80,7 @@
         "img": "./src/assets/img/Glenallachie12.png",
         "picture": "./src/assets/img/Glenallachie12_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#e95e92",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -100,6 +104,7 @@
         "img": "./src/assets/img/DeanstonVirginOak.webp",
         "picture": "./src/assets/img/DeanstonVirginOak_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#cabdb8",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -123,6 +128,7 @@
         "img": "./src/assets/img/EagleRare10.png",
         "picture": "./src/assets/img/EagleRare10_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#878181",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -146,6 +152,7 @@
         "img": "./src/assets/img/ChivasExtra13.png",
         "picture": "./src/assets/img/ChivasExtra13_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#e83524",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -169,6 +176,7 @@
         "img": "./src/assets/img/JohnnieWalkerDoubleBlack.png",
         "picture": "./src/assets/img/JohnnieWalkerDoubleBlack_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#dbc676",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -192,6 +200,7 @@
         "img": "./src/assets/img/SingletonDufftown12.png",
         "picture": "./src/assets/img/SingletonDufftown12_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#0095a6",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -215,6 +224,7 @@
         "img": "./src/assets/img/Ballantines17.png",
         "picture": "./src/assets/img/Ballantines17_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
+        "themeColor": "#598a94",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
