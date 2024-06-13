@@ -12,7 +12,6 @@
         position: relative;
         display: grid;
         grid-template-columns: 320px 1fr;
-        gap: 2rem;
         background-color: whitesmoke;
         height: 500px;
         
@@ -33,12 +32,14 @@
                 flex-direction: column;
                 gap: 1rem;
                 justify-content: center;
+                padding: 2rem;
             }
 
             &--title {
                 color: var(--theme-color);
                 font-size: 1.3rem;
                 font-weight: 300;
+                filter: brightness(80%);
                 letter-spacing: 0.1rem;
                 display: inline-block;
                 border-bottom: 1px solid #000;
@@ -60,6 +61,7 @@
                     align-self: flex-end;
 
                     &_title {
+                        filter: brightness(80%);
                         font-size: 1.1rem;
                         font-weight: 300;
                         letter-spacing: 0.1rem;

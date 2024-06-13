@@ -31,13 +31,13 @@
         "age": "NAS",
         "img": "./src/assets/img/LaphroaigSelect.png",
         "picture": "./src/assets/img/LaphroaigSelect_Content.webp",
-        "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-        "themeColor": "#58be02",
+        "info": "Produto de entrada da Laphroaig. O nome 'Select' refere-se a vasta seleção de barris feita pela destilaria para produzir esse rótulo, contendo barris ex-bourbon first-fill, sendo estes Maker's Mark, quarter cask, PX e carvalho europeu. Sua cor é natural, um pouco clara devido ao pouco tempo de maturação. É bem encorpado graças a ação da turfa no destilado, Laphroaig tem entre 40 e 50 ppm em seus produtos.",
+        "themeColor": "seagreen",
 
         "taste": {
-            "nose": "Muito defumado e marítimo.",
-            "palate": "Defumado, salobro, marítimo, com toques doces sutís.",
-            "description": "Turga muito potente. Apesar de ser um whisky jovem, 0 percepção de álcool."
+            "nose": "Cheiro de mar extremamente claro, com a turfa medicinal caracterísca da Laphroaig. Potente e pouco rebelde, pouco complexo.",
+            "palate": "É oleoso, o defumado fica mais presente que no olfato, agora sendo algo mais terroso e iodado. Bem mineral e marítimo, um pouco picante e com um adocicado bem leve. Muito potente, nada de sabor de álcool e com uma finalização longa, te deixa salivando pra mais.",
+            "description": "Vindo da ilha de Islay, é muito marítimo e mineral, e obviamente, tem um defumado muito presente. Apesar de ser um whisky jovem, o álcool é extremamente pouco perceptível. Por ser o produto de entrada da destilaria ele é consideravelmente simples perto a outros da marca, porém ainda assim, um monstro na indústria. Lembra um peixe assado, uma fogueira e o litoral."
         },
 
         "rating": {
@@ -104,7 +104,7 @@
         "img": "./src/assets/img/DeanstonVirginOak.webp",
         "picture": "./src/assets/img/DeanstonVirginOak_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-        "themeColor": "#cabdb8",
+        "themeColor": "#d9dadb",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -152,7 +152,7 @@
         "img": "./src/assets/img/ChivasExtra13.png",
         "picture": "./src/assets/img/ChivasExtra13_Content.webp",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-        "themeColor": "#e83524",
+        "themeColor": "#ff2643",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -200,7 +200,7 @@
         "img": "./src/assets/img/SingletonDufftown12.png",
         "picture": "./src/assets/img/SingletonDufftown12_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-        "themeColor": "#0095a6",
+        "themeColor": "#4ab7ff",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",
@@ -224,7 +224,7 @@
         "img": "./src/assets/img/Ballantines17.png",
         "picture": "./src/assets/img/Ballantines17_Content.jpg",
         "info": "Maturado em barris ex-bourbon e finalizado em barris de carvalho virgem.",
-        "themeColor": "#598a94",
+        "themeColor": "#0a748a",
 
         "taste": {
             "nose": "Muito defumado e marítimo.",

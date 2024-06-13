@@ -45,7 +45,7 @@ export default function HeaderCatalog({ products, setCurrentProduct, currentProd
                     </select>
                 </div>
                 <form className='header_catalog__options-search'>
-                    <input ref={inputRef} value={searchFor} type='text' className='header_catalog__options-search_input' placeholder='Procurar por nome' onChange={handleInput} />
+                    <input ref={inputRef} value={searchFor} type='text' className='header_catalog__options-search_input' placeholder='Buscar' onChange={handleInput} />
                     <button type='button' className='header_catalog__options-search_btn bi bi-x-lg' onClick={clearInput}></button>
                 </form>
             </div>
@@ -67,8 +67,8 @@ export default function HeaderCatalog({ products, setCurrentProduct, currentProd
                     }
                 </div>
                 <div className='header_catalog__products-buttons'>
-                    <button type='button' className='header_catalog__products-buttons--left bi bi-arrow-left-circle-fill' onClick={handleScrollClick}></button>
-                    <button type='button' className='header_catalog__products-buttons--right bi bi-arrow-right-circle-fill' onClick={handleScrollClick}></button>
+                    <button type='button' className='header_catalog__products-buttons--left' onClick={handleScrollClick}></button>
+                    <button type='button' className='header_catalog__products-buttons--right' onClick={handleScrollClick}></button>
                 </div>
             </div>
         </div>

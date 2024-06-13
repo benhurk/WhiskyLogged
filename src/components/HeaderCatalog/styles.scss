@@ -1,7 +1,7 @@
 .header_catalog {
     position: relative;
     border-bottom: 2px solid var(--theme-color);
-    background-color: var(--dark);
+    background-color: transparent;
 
     &__options {
         width: fit-content;
@@ -12,11 +12,10 @@
 
         &-search {
             &_input {
-                border: none;
-                border-bottom: 1px solid var(--theme-color);
+                border: 1px solid var(--theme-color);
                 outline: none;
                 padding: 0.3rem;
-                background-color: #333;
+                background-color: var(--dark);
                 color: #fff;
                 border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
@@ -25,7 +24,7 @@
                 &::placeholder {
                     color: #fff;
                     transition: 0.2s ease-in-out;
-                    opacity: .5;
+                    opacity: .4;
                 }
 
                 &:hover {
@@ -36,10 +35,9 @@
             }
 
             &_btn {
-                border: none;
+                border: 1px solid var(--theme-color);
                 padding: 0.3rem;
                 background-color: var(--theme-color);
-                border-bottom: 1px solid var(--theme-color);
                 border-top-right-radius: 4px;
                 border-bottom-right-radius: 4px;
                 transition: color 0.2s ease-in-out;
@@ -54,9 +52,10 @@
 
         &-type {
             position: relative;
-            background-color: #333;
+            width: 150px;
+            background-color: var(--dark);
             color: #fff;
-            border-bottom: 1px solid var(--theme-color);
+            border: 1px solid var(--theme-color);
             border-radius: 4px;
             padding: 0.3rem;
             padding-right: 1.5rem;
@@ -83,8 +82,8 @@
             &_title {
                 font-size: 1rem;
                 font-family: sans-serif;
-                font-weight:lighter;
-                opacity: .5;
+                font-weight: lighter;
+                opacity: .8;
             }
 
             select {
@@ -111,6 +110,7 @@
         padding-bottom: 1rem;
 
         &_wraper {
+            height: 100px;
             display: flex;
             overflow-x: scroll;
             overflow-y: hidden;
@@ -128,7 +128,7 @@
 
         &-item {
             width: 100px;
-            height: 100px;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -176,7 +176,7 @@
         }
 
         &-none {
-            margin: 0 auto;
+            margin: auto;
             opacity: .75;
             font-style: oblique;
         }
@@ -185,10 +185,11 @@
             &--left, &--right {
                 position: absolute;
                 width: 2rem;
+                height: 100%;
+                background-color: var(--theme-color);
                 top: 50%;
                 transform: translate(0, -50%);
                 border: none;
-                background-color: transparent;
                 color: var(--theme-color);
                 font-size: 1.6rem;
                 cursor: pointer;
@@ -207,10 +208,34 @@
     
             &--left {
                 left: 0;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    right: 0.3rem;
+                    transform: translate(-50%, -50%);
+                    border-top: .4rem solid transparent;
+                    border-bottom: .4rem solid transparent;
+                    border-right: .8rem solid #fff;
+                }
             }
     
             &--right {
                 right: 0;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    right: 0.3rem;
+                    transform: translate(-50%, -50%);
+                    border-top: .4rem solid transparent;
+                    border-bottom: .4rem solid transparent;
+                    border-left: .8rem solid #fff;
+                }
             }
         }
     }
