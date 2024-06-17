@@ -1,11 +1,31 @@
+import { useEffect, useRef } from 'react';
 import './styles.scss';
 
 export default function ProductContent({ currentProduct }) {
+    const contentAnimRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('anim');
+                } 
+            });
+        }, {
+            threshold: .5
+        });
+
+        observer.observe(contentAnimRef.current);
+        return () => observer.disconnect();
+    }, [])
+
+    useEffect(() => { contentAnimRef.current.classList.remove('anim') }, [currentProduct]);
+
     return (
         <section className='product_content'>
             <h2 className='product_content--title'>{currentProduct.name} <i className="bi bi-body-text"></i></h2>
 
-            <div className='product_content__inner'>
+            <div className='product_content__inner' ref={contentAnimRef}>
                 <div className='product_content__inner_img'>
                     <img src={currentProduct.picture} alt={currentProduct.name}></img>
                 </div>

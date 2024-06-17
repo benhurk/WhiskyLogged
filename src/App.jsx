@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './global.scss'
 
-import Header from './containers/Header';
-import Content from './containers/Content';
+import ProductPage from './pages/Product';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -28,10 +27,13 @@ function App() {
 
   return (
     <>
-    <Header getProducts={products} getCurrentProduct={currentProduct} selectCurrentProduct={selectProduct} />
-    <div className="container">
-      {currentProduct ? <Content getCurrentProduct={currentProduct} /> : <span>alo</span>}
-    </div>
+    {
+      currentProduct
+      ?
+      <ProductPage getProducts={products} getCurrentProduct={currentProduct} selectCurrentProduct={selectProduct} />
+      :
+      <span>bruh</span>
+    }
     </>
   )
 }
