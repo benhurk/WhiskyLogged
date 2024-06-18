@@ -1,13 +1,13 @@
 import './styles.css';
 
 import ProductDisplay from '../../components/ProductDisplay';
-import ProductContent from '../../components/ProductContent';
+import ProductInfo from '../../components/ProductInfo';
 
-export default function Content() {
+export default function PageContent() {
     return (
         <main className='content'>
             <ProductDisplay />
-            <ProductContent />
+            <ProductInfo />
         </main>
     )
 }

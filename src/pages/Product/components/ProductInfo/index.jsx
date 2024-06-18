@@ -3,7 +3,7 @@ import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
 
-export default function ProductContent() {
+export default function ProductInfo() {
     const {currentProduct} = useContext(ProductContext);
 
     const contentAnimRef = useRef();

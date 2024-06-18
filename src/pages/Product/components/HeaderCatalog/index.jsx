@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext } from 'react';
 import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
@@ -71,8 +71,8 @@ export default function HeaderCatalog() {
                     }
                 </div>
                 <div className='header_catalog__products-buttons'>
-                    <button type='button' className='header_catalog__products-buttons--left' onClick={handleScrollClick}></button>
-                    <button type='button' className='header_catalog__products-buttons--right' onClick={handleScrollClick}></button>
+                    <button type='button' className='header_catalog__products-buttons--left bi bi-chevron-left' onClick={handleScrollClick}></button>
+                    <button type='button' className='header_catalog__products-buttons--right bi bi-chevron-right' onClick={handleScrollClick}></button>
                 </div>
             </div>
         </div>

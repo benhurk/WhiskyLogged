@@ -18,11 +18,8 @@
     }
 
     &_pageup {
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
+        display: block;
         margin: 0 auto;
-        align-items: center;
         border: 1px solid var(--theme-color);
         border-radius: 8px;
         padding: 0.8rem;
@@ -34,5 +31,15 @@
         &:hover {
             background-color: var(--theme-color);
         }
+    }
+
+    &_info {
+        font-size: 0.6rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-family: sans-serif;
+        opacity: 0.8;
+        font-weight: lighter;
+        pointer-events: none;
     }
 }

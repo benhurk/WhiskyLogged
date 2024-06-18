@@ -191,6 +191,7 @@
                 border: none;
                 color: var(--theme-color);
                 font-size: 1.6rem;
+                color: #fff;
                 cursor: pointer;
                 opacity: .75;
                 transition: opacity 0.25s ease-in-out;
@@ -207,34 +208,10 @@
     
             &--left {
                 left: 0;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    right: 0.3rem;
-                    transform: translate(-50%, -50%);
-                    border-top: .4rem solid transparent;
-                    border-bottom: .4rem solid transparent;
-                    border-right: .8rem solid #fff;
-                }
             }
     
             &--right {
                 right: 0;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    right: 0.3rem;
-                    transform: translate(-50%, -50%);
-                    border-top: .4rem solid transparent;
-                    border-bottom: .4rem solid transparent;
-                    border-left: .8rem solid #fff;
-                }
             }
         }
     }

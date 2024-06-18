@@ -9,7 +9,8 @@ export default function Footer() {
     return (
         <footer className='footer'>
             <div className="container">
-                <button className='footer_pageup bi bi-chevron-double-up' onClick={scrollToTop}>PageUp</button>
+                <button className='footer_pageup bi bi-chevron-double-up' onClick={scrollToTop}></button>
+                <p className='footer_info'>MyWhiskySpace por Ben Hur Kuchler</p>
             </div>
         </footer>
     )

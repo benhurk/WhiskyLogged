@@ -1,7 +1,10 @@
-import Header from './containers/Header';
-import Content from './containers/Content';
+import Header from '../../components/Header';
+import HeaderContent from './containers/HeaderContent';
+import PageContent from './containers/PageContent';
+
 import { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
+
 
 export default function ProductPage() {
     const {currentProduct} = useContext(ProductContext);
@@ -12,9 +15,11 @@ export default function ProductPage() {
             currentProduct
             ?
             <>
-            <Header />
+            <Header>
+                <HeaderContent />
+            </Header>
             <div className="container">
-                <Content />
+                <PageContent />
             </div>
             </>
             :
