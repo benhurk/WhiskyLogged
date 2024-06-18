@@ -1,7 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import './styles.scss';
 
-export default function ProductContent({ currentProduct }) {
+import { ProductContext } from '../../../../contexts/ProductContext';
+
+export default function ProductContent() {
+    const {currentProduct} = useContext(ProductContext);
+
     const contentAnimRef = useRef();
 
     useEffect(() => {

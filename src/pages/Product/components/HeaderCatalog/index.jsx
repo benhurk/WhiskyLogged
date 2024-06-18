@@ -1,7 +1,11 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
 import './styles.scss';
 
-export default function HeaderCatalog({ products, setCurrentProduct, currentProduct }) {
+import { ProductContext } from '../../../../contexts/ProductContext';
+
+export default function HeaderCatalog() {
+    const {products, currentProduct, selectProduct} = useContext(ProductContext);
+
     const [searchFor, setSearchFor] = useState('');
     const [typeFilter, setTypeFilter] = useState('');
     const inputRef = useRef();
@@ -54,7 +58,7 @@ export default function HeaderCatalog({ products, setCurrentProduct, currentProd
                     {searchedProducts.length > 0
                         ?
                         searchedProducts.map(item => (
-                            <div key={item.name} data-name={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`} onClick={setCurrentProduct}>
+                            <div key={item.name} data-name={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`} onClick={selectProduct}>
                                 <img src={item.img} alt="Product Image" />
                                 <div className='header_catalog__products-item_name'>
                                     <h3 className='header_catalog__products-item_name-main'>{item.name.split(' - ')[0]}</h3>

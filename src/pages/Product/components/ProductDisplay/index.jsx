@@ -1,7 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import './styles.scss';
 
-export default function Product({ currentProduct }) {
+import { ProductContext } from '../../../../contexts/ProductContext';
+
+export default function Product() {
+    const {currentProduct} = useContext(ProductContext);
+
     const ratingExpand = useRef();
 
     const renderStarRatings = (rating) => {
