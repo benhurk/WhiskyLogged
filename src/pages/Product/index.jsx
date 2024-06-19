@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
-import HeaderContent from './containers/HeaderContent';
-import PageContent from './containers/PageContent';
+import HeaderCatalog from './components/HeaderCatalog';
+import ProductDisplay from './containers/ProductDisplay';
+import ProductInfo from './containers/ProductInfo';
 
 import { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
@@ -16,11 +17,16 @@ export default function ProductPage() {
             ?
             <>
             <Header>
-                <HeaderContent />
+                <div className='container'>
+                    <HeaderCatalog />
+                </div>
             </Header>
-            <div className="container">
-                <PageContent />
-            </div>
+            <main className='content'>
+                <div className="container">
+                    <ProductDisplay />
+                    <ProductInfo />
+                </div>
+            </main>
             </>
             :
             <span>alo</span>

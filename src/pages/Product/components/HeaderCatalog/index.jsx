@@ -2,16 +2,17 @@ import { useState, useRef, useContext } from 'react';
 import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
+import { SearchContext } from '../../../../contexts/SearchContext';
+
+import SearchInput from '../../../../components/SearchInput';
 
 export default function HeaderCatalog() {
     const {products, currentProduct, selectProduct} = useContext(ProductContext);
+    const {searchFor, setSearchFor} = useContext(SearchContext);
 
-    const [searchFor, setSearchFor] = useState('');
     const [typeFilter, setTypeFilter] = useState('');
     const inputRef = useRef();
     const wraperRef = useRef();
-
-    const handleInput = (e) => {    setSearchFor(e.target.value);   }
 
     const handleTypeSelect = (e) => {   setTypeFilter(e.target.value);  }
 
@@ -49,8 +50,7 @@ export default function HeaderCatalog() {
                     </select>
                 </div>
                 <form className='header_catalog__options-search'>
-                    <input ref={inputRef} value={searchFor} type='text' className='header_catalog__options-search_input' placeholder='Buscar' onChange={handleInput} />
-                    <button type='button' className='header_catalog__options-search_btn bi bi-x-lg' onClick={clearInput}></button>
+                    <SearchInput setRef={inputRef} icon={'bi bi-x-lg'} handleBtn={clearInput} />
                 </form>
             </div>
             <div className='header_catalog__products'>
@@ -59,7 +59,7 @@ export default function HeaderCatalog() {
                         ?
                         searchedProducts.map(item => (
                             <div key={item.name} data-name={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`} onClick={selectProduct}>
-                                <img src={item.img} alt="Product Image" />
+                                <img src={item.img} alt={item.name} />
                                 <div className='header_catalog__products-item_name'>
                                     <h3 className='header_catalog__products-item_name-main'>{item.name.split(' - ')[0]}</h3>
                                     <h4 className='header_catalog__products-item_name-sub'>{item.name.split(' - ')[1]}</h4>

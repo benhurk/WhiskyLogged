@@ -19,7 +19,8 @@ export const ProductProvider = ({ children }) => {
     }, []);
 
     const selectProduct = (e) => {
-        const currentItem = products.filter(item => item.name.includes(e.target.dataset.name));
+        const el = e.target.closest('[data-name]');
+        const currentItem = products.filter(item => item.name.includes(el.dataset.name));
         setCurrentProduct(currentItem[0], pageTheme(currentItem[0]));
     }
 
