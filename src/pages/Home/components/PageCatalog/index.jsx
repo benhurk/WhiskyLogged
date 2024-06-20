@@ -1,17 +1,28 @@
 import './styles.scss';
 import { useContext } from 'react';
 
-import { renderStarRatings } from '../../../../scripts/renderStarRatings';
 import { ProductContext } from '../../../../contexts/ProductContext';
+import { SearchContext } from '../../../../contexts/SearchContext';
+import { FilterContext } from '../../../../contexts/FilterContext';
+
+import { renderStarRatings } from '../../../../scripts/renderStarRatings';
+import { filterItems } from '../../../../scripts/filterItems';
 
 export default function PageCatalog() {
-    const {products, currentProduct, selectProduct} = useContext(ProductContext);
+    const {products, selectProduct} = useContext(ProductContext);
+    const {searchFor} = useContext(SearchContext);
+    const {typeFilter} = useContext(FilterContext);
+
+    const searchedProducts = filterItems(products, searchFor, typeFilter);
 
     return (
         <section className='page_catalog'>
-            <ul className='page_catalog__products'>
+            {
+                searchedProducts.length > 0
+                ?
+                <ul className='page_catalog__products'>
                 {
-                    products.map(item => (
+                    searchedProducts.map(item => (
                         <li key={item.name} data-name={item.name} className='page_catalog__products-card' onClick={selectProduct}>
                             <div className='page_catalog__products-card_img'>
                                 <img src={item.img} alt={item.name} />
@@ -25,7 +36,10 @@ export default function PageCatalog() {
                         </li>
                     ))
                 }
-            </ul>
+                </ul>
+                :
+                <span className='page_catalog__products-none'>Busca não encontrada.</span>
+            }
         </section>
     )
 }

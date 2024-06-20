@@ -1,4 +1,7 @@
 .page_catalog {
+    text-align: center;
+    padding-bottom: 5rem;
+
     &__products {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -31,13 +34,13 @@
                     background: radial-gradient(ellipse at top, var(--theme-color) 0%, transparent 70%);
                     filter: brightness(180%);
                     mix-blend-mode: lighten;
-                    opacity: .3;
+                    opacity: .25;
                     transition: all 0.3s ease-in-out;
                 }
 
                 &:hover {
                     &::before {
-                        opacity: .45;
+                        opacity: .4;
                     }
                 }
 
@@ -72,6 +75,11 @@
                     font-size: 0.8rem;
                 }
             }
+        }
+
+        &-none {
+            opacity: .75;
+            font-style: oblique;
         }
     }
 }

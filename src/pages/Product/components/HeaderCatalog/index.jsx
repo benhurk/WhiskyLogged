@@ -3,18 +3,19 @@ import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
 import { SearchContext } from '../../../../contexts/SearchContext';
+import { FilterContext } from '../../../../contexts/FilterContext';
+
+import { filterItems } from '../../../../scripts/filterItems';
 
 import SearchInput from '../../../../components/SearchInput';
 
 export default function HeaderCatalog() {
     const {products, currentProduct, selectProduct} = useContext(ProductContext);
     const {searchFor, setSearchFor} = useContext(SearchContext);
+    const {typeFilter, handleTypeSelect} = useContext(FilterContext);
 
-    const [typeFilter, setTypeFilter] = useState('');
     const inputRef = useRef();
     const wraperRef = useRef();
-
-    const handleTypeSelect = (e) => {   setTypeFilter(e.target.value);  }
 
     const handleScrollClick = (e) => {
         const el = e.target;
@@ -33,9 +34,7 @@ export default function HeaderCatalog() {
 
     const productTypes = [...new Set(products.map(item => item.type))]
 
-    const searchedProducts = products.filter(item => {
-        return item.name.toLowerCase().includes(searchFor.toLowerCase()) && item.type.includes(typeFilter);
-    })
+    const searchedProducts = filterItems(products, searchFor, typeFilter);
 
     return (
         <div className='header_catalog'>
