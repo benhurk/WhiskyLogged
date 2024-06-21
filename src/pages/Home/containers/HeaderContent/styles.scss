@@ -8,28 +8,5 @@
             display: inline-block;
             margin-bottom: 2rem;
         }
-
-        &-type {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            color: whitesmoke;
-
-            .bi {
-                pointer-events: none;
-                font-size: 0.8rem;
-            }
-
-            &_item {
-                cursor: pointer;
-                color: var(--theme-color);
-                filter: brightness(350%);
-                transition: color 0.3s ease-in-out;
-
-                &:hover {
-                    color: whitesmoke;
-                }
-            }
-        }
     }
 }

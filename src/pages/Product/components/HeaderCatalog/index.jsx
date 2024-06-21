@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from 'react';
+import { useRef, useContext } from 'react';
 import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
@@ -8,13 +8,13 @@ import { FilterContext } from '../../../../contexts/FilterContext';
 import { filterItems } from '../../../../scripts/filterItems';
 
 import SearchInput from '../../../../components/SearchInput';
+import TypeSelector from '../../../../components/TypeSelector';
 
 export default function HeaderCatalog() {
     const {products, currentProduct, selectProduct} = useContext(ProductContext);
-    const {searchFor, setSearchFor} = useContext(SearchContext);
-    const {typeFilter, handleTypeSelect} = useContext(FilterContext);
+    const {searchFor} = useContext(SearchContext);
+    const {typeFilter} = useContext(FilterContext);
 
-    const inputRef = useRef();
     const wraperRef = useRef();
 
     const handleScrollClick = (e) => {
@@ -27,29 +27,16 @@ export default function HeaderCatalog() {
         }
     }
 
-    const clearInput = () => {
-        inputRef.current.value = '';
-        setSearchFor('');
-    }
-
-    const productTypes = [...new Set(products.map(item => item.type))]
-
     const searchedProducts = filterItems(products, searchFor, typeFilter);
 
     return (
         <div className='header_catalog'>
             <div className='header_catalog__options'>
                 <div className='header_catalog__options-type'>
-                    <span className='header_catalog__options-type_title'>{typeFilter.length > 0 ? typeFilter : 'Selecionar tipo'}</span>
-                    <select value={typeFilter} onChange={handleTypeSelect}>
-                        <option value=''>Todos</option>
-                        {productTypes.map(item => (
-                            <option key={item} value={item}>{item}</option>
-                        ))}
-                    </select>
+                    <TypeSelector />
                 </div>
                 <form className='header_catalog__options-search'>
-                    <SearchInput setRef={inputRef} icon={'bi bi-x-lg'} handleBtn={clearInput} />
+                    <SearchInput />
                 </form>
             </div>
             <div className='header_catalog__products'>

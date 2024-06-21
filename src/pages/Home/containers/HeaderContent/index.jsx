@@ -1,6 +1,7 @@
 import './styles.scss';
 
 import SearchInput from "../../../../components/SearchInput";
+import TypeSelector from '../../../../components/TypeSelector';
 
 export default function HeaderContent() {
 
@@ -10,11 +11,7 @@ export default function HeaderContent() {
                 <form className='header__options-search'>
                         <SearchInput icon={'bi bi-search'} />
                 </form>
-                <ul className='header__options-type'>
-                    <li className='header__options-type_item'><i className="bi bi-circle"></i> Single Malt</li>
-                    <li className='header__options-type_item'><i className="bi bi-circle"></i> Blend</li>
-                    <li className='header__options-type_item'><i className="bi bi-circle"></i> Bourbon</li>
-                </ul>
+                <TypeSelector />
             </section>
         </div>
     )
