@@ -3,11 +3,7 @@ import './styles.scss';
 
 import { renderStarRatings } from '../../../../scripts/renderStarRatings';
 
-import { ProductContext } from '../../../../contexts/ProductContext';
-
-export default function Product() {
-    const {currentProduct} = useContext(ProductContext);
-
+export default function Product({currentProduct}) {
     const ratingExpand = useRef();
 
     return(

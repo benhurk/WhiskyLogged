@@ -1,22 +1,32 @@
+import './styles.scss';
+
+import { SearchProvider } from '../../contexts/SearchContext';
+import { FilterProvider } from '../../contexts/FilterContext';
+
 import Header from "../../components/Header";
-import HeaderContent from "./containers/HeaderContent";
+import Footer from '../../components/Footer';
+import SearchInput from "../../components/SearchInput";
+import TypeSelector from "../../components/TypeSelector";
+
 import PageCatalog from "./components/PageCatalog";
-import { SearchProvider } from "../../contexts/SearchContext";
-import { FilterProvider } from "../../contexts/FilterContext";
 
 export default function HomePage() {
     return (
         <>
-            <FilterProvider>
+            <SearchProvider><FilterProvider>
                 <Header>
-                    <HeaderContent />
+                    <section className='header__options'>
+                        <SearchInput icon={'bi bi-search'} />
+                        <TypeSelector />
+                    </section>
                 </Header>
                 <main>
                     <div className="container">
                         <PageCatalog />
                     </div>
                 </main>
-            </FilterProvider>
+            </FilterProvider></SearchProvider>
+            <Footer />
         </>
     )
 }

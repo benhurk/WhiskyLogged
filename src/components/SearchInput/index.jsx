@@ -14,9 +14,9 @@ export default function SearchInput() {
     }
 
     return (
-        <>
-        <input ref={inputRef} value={searchFor} type='text' className='input' placeholder='Buscar' onChange={handleInput} />
-        <button type='button' className='btn bi bi-x-lg' onClick={clearInput}></button>
-        </>
+        <form className='search'>
+            <input ref={inputRef} value={searchFor} type='text' className='search__input' placeholder='Buscar' onChange={handleInput} />
+            <button type='button' className='search--clean_btn bi bi-x-lg' onClick={clearInput}></button>
+        </form>
     )
 }

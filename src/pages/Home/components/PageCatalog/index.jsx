@@ -1,5 +1,6 @@
 import './styles.scss';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
 import { SearchContext } from '../../../../contexts/SearchContext';
@@ -22,17 +23,19 @@ export default function PageCatalog() {
                 ?
                 <ul className='page_catalog__products'>
                 {
-                    searchedProducts.map(item => (
+                    searchedProducts.map((item) => (
                         <li key={item.name} data-name={item.name} className='page_catalog__products-card' onClick={selectProduct}>
-                            <div className='page_catalog__products-card_img'>
-                                <img src={item.img} alt={item.name} />
-                            </div>
-                            <div className='page_catalog__products-card_title'>
-                                <h3 className='page_catalog__products-card_title-name'>{item.name}</h3>
-                                <div className='page_catalog__products-card_title-rating'>
-                                    {renderStarRatings((item.rating.nose + item.rating.palate + item.rating.cost) / 3)}
+                            <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`}>
+                                <div className='page_catalog__products-card_img'>
+                                    <img src={item.img} alt={item.name} />
                                 </div>
-                            </div>
+                                <div className='page_catalog__products-card_title'>
+                                    <h3 className='page_catalog__products-card_title-name'>{item.name}</h3>
+                                    <div className='page_catalog__products-card_title-rating'>
+                                        {renderStarRatings((item.rating.nose + item.rating.palate + item.rating.cost) / 3)}
+                                    </div>
+                                </div>
+                            </Link>
                         </li>
                     ))
                 }

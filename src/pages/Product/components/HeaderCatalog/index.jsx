@@ -1,4 +1,5 @@
 import { useRef, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 import { ProductContext } from '../../../../contexts/ProductContext';
@@ -10,8 +11,8 @@ import { filterItems } from '../../../../scripts/filterItems';
 import SearchInput from '../../../../components/SearchInput';
 import TypeSelector from '../../../../components/TypeSelector';
 
-export default function HeaderCatalog() {
-    const {products, currentProduct, selectProduct} = useContext(ProductContext);
+export default function HeaderCatalog({currentProduct}) {
+    const {products} = useContext(ProductContext);
     const {searchFor} = useContext(SearchContext);
     const {typeFilter} = useContext(FilterContext);
 
@@ -32,25 +33,21 @@ export default function HeaderCatalog() {
     return (
         <div className='header_catalog'>
             <div className='header_catalog__options'>
-                <div className='header_catalog__options-type'>
-                    <TypeSelector />
-                </div>
-                <form className='header_catalog__options-search'>
-                    <SearchInput />
-                </form>
+                <SearchInput />
+                <TypeSelector />
             </div>
             <div className='header_catalog__products'>
                 <div className='header_catalog__products_wraper' ref={wraperRef}>
                     {searchedProducts.length > 0
                         ?
                         searchedProducts.map(item => (
-                            <div key={item.name} data-name={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`} onClick={selectProduct}>
-                                <img src={item.img} alt={item.name} />
+                            <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`} key={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`}>
+                                <img className='header_catalog__products-item_img' src={item.img} alt={item.name} />
                                 <div className='header_catalog__products-item_name'>
                                     <h3 className='header_catalog__products-item_name-main'>{item.name.split(' - ')[0]}</h3>
                                     <h4 className='header_catalog__products-item_name-sub'>{item.name.split(' - ')[1]}</h4>
                                 </div>
-                            </div>
+                            </Link>
                         ))
                         :
                         <span className='header_catalog__products-none'>Busca não encontrada.</span>

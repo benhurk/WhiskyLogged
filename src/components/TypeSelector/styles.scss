@@ -6,15 +6,16 @@
 
     &__item {
         cursor: pointer;
-        color: var(--theme-color);
-        filter: brightness(350%);
+        color: whitesmoke;
         transition: color 0.3s ease-in-out;
 
         &:hover {
-            color: whitesmoke;
+            color: var(--theme-color);
         }
 
         .bi {
+            color: var(--theme-color);
+            filter: brightness(170%);
             pointer-events: none;
             font-size: 0.8rem;
         }

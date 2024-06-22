@@ -4,7 +4,6 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
-    const [currentProduct, setCurrentProduct] = useState(undefined);
 
     const pageTheme = (product) => {
         const rootEl = document.querySelector(':root');
@@ -12,19 +11,15 @@ export const ProductProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('./catalog.json')
+        fetch('../catalog.json')
             .then(res => res.json())
-            .then(catalog => {  setProducts(catalog); setCurrentProduct(catalog[0], pageTheme(catalog[0]));  })
+            .then(catalog => {  
+                setProducts(catalog); 
+            })
             .catch(err => console.error(err))
     }, []);
 
-    const selectProduct = (e) => {
-        const el = e.target.closest('[data-name]');
-        const currentItem = products.filter(item => item.name.includes(el.dataset.name));
-        setCurrentProduct(currentItem[0], pageTheme(currentItem[0]));
-    }
-
     return (
-        <ProductContext.Provider value={{products, currentProduct, selectProduct}}>{children}</ProductContext.Provider>
+        <ProductContext.Provider value={{products}}>{children}</ProductContext.Provider>
     )
 }
