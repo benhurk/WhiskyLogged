@@ -41,7 +41,7 @@ export default function HeaderCatalog({currentProduct}) {
                     {searchedProducts.length > 0
                         ?
                         searchedProducts.map(item => (
-                            <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`} key={item.name} className={`header_catalog__products-item ${item.name === currentProduct.name ? 'current' : ''}`}>
+                            <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`} key={item.name} className={`header_catalog__products-item ${currentProduct && (item.name === currentProduct.name) ? 'current' : ''}`}>
                                 <img className='header_catalog__products-item_img' src={item.img} alt={item.name} />
                                 <div className='header_catalog__products-item_name'>
                                     <h3 className='header_catalog__products-item_name-main'>{item.name.split(' - ')[0]}</h3>

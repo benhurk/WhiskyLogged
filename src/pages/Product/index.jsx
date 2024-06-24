@@ -2,8 +2,9 @@ import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { ProductContext } from '../../contexts/ProductContext';
-import { SearchProvider } from '../../contexts/SearchContext';
-import { FilterProvider } from '../../contexts/FilterContext';
+
+import { setPageTheme } from '../../scripts/pageTheme';
+import { scrollTop } from '../../scripts/scrollTop';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -11,38 +12,38 @@ import Footer from '../../components/Footer';
 import HeaderCatalog from './components/HeaderCatalog';
 import ProductDisplay from './containers/ProductDisplay';
 import ProductInfo from './containers/ProductInfo';
-
+import ProductNotFound from './containers/ProductNotFound';
 
 export default function ProductPage() {
-    const {products} = useContext(ProductContext);
+    const { products } = useContext(ProductContext);
+    const { name } = useParams();
 
-    const {name} = useParams();
+    const currentProduct = products.filter(item => item.name.replace(/-|\s/g, "") === (name))[0];
 
-    const currentProduct = products.filter(item => item.name.replace(/-|\s/g,"").includes(name))[0];
+    setPageTheme(currentProduct);
+    scrollTop(currentProduct);
 
     return (
         <>
-            <SearchProvider><FilterProvider>
-                {
-                    currentProduct
-                    ?
-                    <>
-                    <Header>
-                        <div className='container'>
-                            <HeaderCatalog currentProduct={currentProduct} />
-                        </div>
-                    </Header>
-                    <main className='content'>
-                        <div className="container">
-                            <ProductDisplay currentProduct={currentProduct} />
-                            <ProductInfo currentProduct={currentProduct}/>
-                        </div>
-                    </main>
-                    </>
-                    :
-                    <span>que lixo</span>
-                }
-            </FilterProvider></SearchProvider>
+            <Header>
+                <div className='container'>
+                    <HeaderCatalog currentProduct={currentProduct} />
+                </div>
+            </Header>
+            <main className='content'>
+                <div className="container">
+                    {
+                        currentProduct
+                            ?
+                            <>
+                                <ProductDisplay currentProduct={currentProduct} />
+                                <ProductInfo currentProduct={currentProduct} />
+                            </>
+                            :
+                            <ProductNotFound />
+                    }
+                </div>
+            </main>
             <Footer />
         </>
     )

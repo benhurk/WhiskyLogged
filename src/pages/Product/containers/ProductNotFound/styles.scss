@@ -1,0 +1,15 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &_title {
+        font-weight: 300;
+    }
+
+    &_img {
+        opacity: .1;
+        pointer-events: none;
+    }
+}

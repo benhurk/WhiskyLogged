@@ -1,7 +1,7 @@
 import './styles.scss';
 
-import { SearchProvider } from '../../contexts/SearchContext';
-import { FilterProvider } from '../../contexts/FilterContext';
+import { setPageTheme } from '../../scripts/pageTheme';
+import { scrollTop } from '../../scripts/scrollTop';
 
 import Header from "../../components/Header";
 import Footer from '../../components/Footer';
@@ -11,21 +11,22 @@ import TypeSelector from "../../components/TypeSelector";
 import PageCatalog from "./components/PageCatalog";
 
 export default function HomePage() {
+    setPageTheme();
+    scrollTop();
+
     return (
         <>
-            <SearchProvider><FilterProvider>
-                <Header>
-                    <section className='header__options'>
-                        <SearchInput icon={'bi bi-search'} />
-                        <TypeSelector />
-                    </section>
-                </Header>
-                <main>
-                    <div className="container">
-                        <PageCatalog />
-                    </div>
-                </main>
-            </FilterProvider></SearchProvider>
+            <Header>
+                <section className='header__options'>
+                    <SearchInput />
+                    <TypeSelector />
+                </section>
+            </Header>
+            <main>
+                <div className="container">
+                    <PageCatalog />
+                </div>
+            </main>
             <Footer />
         </>
     )
