@@ -26,9 +26,7 @@ export default function ProductPage() {
     return (
         <>
             <Header>
-                <div className='container'>
-                    <HeaderCatalog currentProduct={currentProduct} />
-                </div>
+                <HeaderCatalog currentProduct={currentProduct} />
             </Header>
             <main className='content'>
                 <div className="container">

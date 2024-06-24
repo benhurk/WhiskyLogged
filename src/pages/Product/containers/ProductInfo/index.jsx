@@ -23,7 +23,7 @@ export default function ProductInfo({currentProduct}) {
 
     return (
         <section className='product_content'>
-            <h2 className='product_content--title'>{currentProduct.name} <i className="bi bi-body-text"></i></h2>
+            <h2 className='product_content--title'>{currentProduct.name}</h2>
 
             <div className='product_content__inner' ref={contentAnimRef}>
                 <div className='product_content__inner_img'>

@@ -14,7 +14,7 @@ export const ProductProvider = ({ children }) => {
         fetch('../catalog.json')
             .then(res => res.json())
             .then(catalog => {  
-                setProducts(catalog); 
+                setProducts(catalog.sort((a, b) => ((b.rating.nose + b.rating.palate + b.rating.cost) / 3) - ((a.rating.nose + a.rating.palate + a.rating.cost) / 3))); 
             })
             .catch(err => console.error(err))
     }, []);

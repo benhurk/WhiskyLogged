@@ -4,6 +4,10 @@
     gap: 2rem;
     color: whitesmoke;
 
+    @media (max-width: 768px) {
+        gap: 1rem;
+    }
+
     &__item {
         cursor: pointer;
         color: whitesmoke;

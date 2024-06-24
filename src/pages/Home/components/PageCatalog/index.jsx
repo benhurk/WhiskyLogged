@@ -9,12 +9,22 @@ import { FilterContext } from '../../../../contexts/FilterContext';
 import { renderStarRatings } from '../../../../scripts/renderStarRatings';
 import { filterItems } from '../../../../scripts/filterItems';
 
-export default function PageCatalog() {
+export default function PageCatalog({sortBy}) {
     const {products, selectProduct} = useContext(ProductContext);
     const {searchFor} = useContext(SearchContext);
     const {typeFilter} = useContext(FilterContext);
-
+    
     const searchedProducts = filterItems(products, searchFor, typeFilter);
+
+    const sortedProducts = searchedProducts.sort((a, b) => {
+        return (
+            sortBy
+            ?
+            ((b.rating.nose + b.rating.palate + b.rating.cost) / 3) - ((a.rating.nose + a.rating.palate + a.rating.cost) / 3)
+            :
+            ((a.rating.nose + a.rating.palate + a.rating.cost) / 3) - ((b.rating.nose + b.rating.palate + b.rating.cost) / 3)
+        )
+    })
 
     return (
         <section className='page_catalog'>
@@ -23,7 +33,7 @@ export default function PageCatalog() {
                 ?
                 <ul className='page_catalog__products'>
                 {
-                    searchedProducts.map((item) => (
+                    sortedProducts.map((item) => (
                         <li key={item.name} data-name={item.name} className='page_catalog__products-card' onClick={selectProduct}>
                             <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`}>
                                 <div className='page_catalog__products-card_img'>

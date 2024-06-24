@@ -22,9 +22,9 @@ export default function HeaderCatalog({currentProduct}) {
         const el = e.target;
 
         if (el.classList.value.includes("--left")) {
-            wraperRef.current.scrollBy({left: -500, behavior: 'smooth'});
+            wraperRef.current.scrollBy({left: -300, behavior: 'smooth'});
         } else if (el.classList.value.includes("--right")) {
-            wraperRef.current.scrollBy({left: 500, behavior: 'smooth'});
+            wraperRef.current.scrollBy({left: 300, behavior: 'smooth'});
         }
     }
 

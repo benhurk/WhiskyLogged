@@ -19,10 +19,20 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 main {
     padding-block: 4rem;
+
+    @media (max-width: 1024px) {
+        padding-block: 2rem;
+        flex: 1;
+    }
 }
 
 //Resets
@@ -48,6 +58,6 @@ a {
     margin: 0 auto;
 
     @media (max-width: 768px) {
-        max-width: 90%;
+        max-width: none;
     }
 }

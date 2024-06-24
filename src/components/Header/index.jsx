@@ -5,9 +5,11 @@ export default function Header({children}) {
     return (
         <header className='header'>
             <h1 className='header_brand'>
-                <Link to='/'>My<strong>Whisky</strong>Space</Link>
+                <Link to='/'><strong>Whisky</strong>Logged</Link>
             </h1>
-            {children}
+            <div className="container">
+                {children}
+            </div>
         </header>
     )
 }
