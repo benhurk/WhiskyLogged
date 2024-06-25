@@ -46,7 +46,7 @@ export default function Product({currentProduct}) {
                     </ul>
                 </li>
                 <li className='product_display__content-image'>
-                    <img src={currentProduct.img} alt={currentProduct.name}></img>
+                    <img src={`../${currentProduct.img}`} alt={currentProduct.name}></img>
                 </li>
                 <li className='product_display__content-info'>
                     <ul className='product_display__content-info_type'>

@@ -27,7 +27,7 @@ export default function ProductInfo({currentProduct}) {
 
             <div className='product_content__inner' ref={contentAnimRef}>
                 <div className='product_content__inner_img'>
-                    <img src={currentProduct.picture} alt={currentProduct.name}></img>
+                    <img src={`../${currentProduct.picture}`} alt={currentProduct.name}></img>
                 </div>
                 <div className='product_content__inner-text_container'>
                     <div className='product_content__inner-text'>
