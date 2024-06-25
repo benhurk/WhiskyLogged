@@ -1,0 +1,243 @@
+{
+    "products": [
+        {
+            "name": "Glenlivet - Caribbean Reserve",
+            "region": "Speyside - Escócia",
+            "type": "Single Malt",
+            "abv": "40%",
+            "age": "NAS",
+            "img": "./img/GlenlivetCaribbean.webp",
+            "picture": "./img/GlenlivetCaribbean_Content.jpg",
+            "info": "Maturado em barris ex-bourbon e barris de rum caribenho, infelizmente não é informado a proporção do quanto de cada barril foi utilizado. A cor é fruto de corante, possui um corpo mediano pra ralo. É um produto acessível da linha de entrada da Glenlivet, possui uma boa qualidade pra sua faixa de preço.",
+            "themeColor": "#ff603d",
+    
+            "taste": {
+                "nose": "Um tanto floral, muito frutado e doce, um pouquinho de malte. Não muito potente mas agradável e muito suave.",
+                "palate": "Doce e com um frutado extremamente presente, o tema de frutas tropicais realmente está presente, destaca-se melão, maçã verde e banana um pouco verde. Não tem muito peso, mas é muito suave e fácil de ser bebido por qualquer um, apesar de não ser rebelde é possíver pegar um pouquinho de gosto de álcool, mas nada muito presente ou que incomode. Na finalização ele é curto, continua frutado e doce, com um leve cítrico.",
+                "description": "Extremamente suave mesmo sendo jovem, muito indicado para iniciantes ou pessoas que não bebem whisky, tanto pra ser bebido puro, com gelo ou pra fazer drinks. Pode não ser muito interessante pra quem já é bebedor, pois não tem muita potência ou complexidade, mas é um bom whisky e uma experiência um pouco diferente do doce e frutado convencional."
+            },
+    
+            "rating": {
+                "nose": 3.0,
+                "palate": 3.5,
+                "cost": 4.0
+            }
+        },
+    
+        {
+            "name": "Laphroaig - Select",
+            "region": "Islay - Escócia",
+            "type": "Single Malt",
+            "abv": "40%",
+            "age": "NAS",
+            "img": "./img/LaphroaigSelect.png",
+            "picture": "./img/LaphroaigSelect_Content.webp",
+            "info": "Produto de entrada da Laphroaig. O nome 'Select' refere-se a vasta seleção de barris feita pela destilaria para produzir esse rótulo, contendo barris ex-bourbon first-fill, sendo estes Maker's Mark, quarter cask, PX e carvalho europeu. Sua cor é natural, um pouco clara devido ao pouco tempo de maturação. É bem encorpado graças a ação da turfa no destilado, Laphroaig tem entre 40 e 50 ppm em seus produtos.",
+            "themeColor": "seagreen",
+    
+            "taste": {
+                "nose": "Cheiro de mar extremamente claro, com a turfa medicinal caracterísca da Laphroaig. Potente e pouco rebelde, mas pouco complexo.",
+                "palate": "É oleoso, o defumado fica mais presente que no olfato, agora sendo algo mais terroso e iodado. Bem mineral e marítimo, um pouco picante e com um adocicado bem leve. Muito potente, nada de sabor de álcool e com uma finalização longa, te deixa salivando pra mais.",
+                "description": "Vindo da ilha de Islay, é muito marítimo e mineral, e obviamente, tem um defumado muito presente. Apesar de ser um whisky jovem, o álcool é não é perceptível. Por ser o produto de entrada da destilaria ele é consideravelmente simples perto a outros da marca, porém ainda assim, um monstro na indústria. Lembra um peixe assado, uma fogueira e o litoral."
+            },
+    
+            "rating": {
+                "nose": 4.0,
+                "palate": 4.5,
+                "cost": 4.0
+            }
+        },
+    
+        {
+            "name": "Talisker - 10 anos",
+            "region": "Skye - Escócia",
+            "type": "Single Malt",
+            "abv": "45,8%",
+            "age": "10 anos",
+            "img": "./img/Talisker10.png",
+            "picture": "./img/Talisker10_Content.webp",
+            "info": "Uma das melhores opções pra quem quer começar na turfa. Talisker possui entre 18 e 20 ppm na cevada e entre 5 e 7 ppm no destilado, fazendo com que não seja um defumado tão forte, além de um frutado acima do normal para esse tipo de produto. Maturado em barris ex-bourbon refill e barris de carvalho europeu. A cor não é natural e tem um corpo mediano.",
+            "themeColor": "#5a88c4",
+    
+            "taste": {
+                "nose": "Um defumado muito prazeroso, suave e mineral, além de muito frutado, casando muito bem com o toque marítimo do whisky. Uma entrega com boa potência.",
+                "palate": "Turfa mais medicinal e terrosa, é um tanto apimentado e salobro, continua bem frutado e marítimo, agora com notas doces e maltosas. Extremamente saboroso e com uma complexidade considerável. Finalização média com a turfa e a mineralidade persistindo.",
+                "description": "Pra quem procura uma turfa presente, mas não muito forte ou que não seja o foco principal do whisky, Talisker 10 anos é a escolha. Todas as características da turfa e da região das ilhas estão presentes, porém o destilado extremamente frutado da destilaria traz uma complexidade e um equilíbrio muito prazeroso que agrada a maioria dos bebedores."
+            },
+    
+            "rating": {
+                "nose": 5.0,
+                "palate": 5.0,
+                "cost": 5.0
+            }
+        },
+    
+        {
+            "name": "GlenAllachie - 12 anos",
+            "region": "Speyside - Escócia",
+            "type": "Single Malt",
+            "abv": "46%",
+            "age": "12 anos",
+            "img": "./img/Glenallachie12.png",
+            "picture": "./img/Glenallachie12_Content.jpg",
+            "info": "Maturado em barris sherry oloroso, PX e carvalho americano virgem. Sua cor é natural e bem escura, indicando que, provavelmente, os barris sherry eram de primeiro uso após o vinho, não passa por filtragem a frio, corpo cremoso. O produto de entrada da destilaria e mesmo assim um sherry poderoso, assinado por Billy Walker, master distiller que ficou conhecido por seus produtos de alta qualidade na Glendronach.",
+            "themeColor": "#e95e92",
+    
+            "taste": {
+                "nose": "Aromas florais e principalmente um panetone extremamente presente e chocolate ao leite. Nada muito complexo mas muito potente e prazeroso.",
+                "palate": "Frutas pretas e vermelhas, principalmente ameixas, chocolate meio amargo, chocotone, amadeirado, no fundo um leve dulçor e pimenta. Finalização longa muito vínica com um chocolate amargo. Muito potente e delicioso.",
+                "description": "Pra você saber o que é sherry na sua vida, um produto relativamente acessível se comparado com outros do mesmo tipo. Deixa de lado a complexidade pra trazer potência e qualidade na entrega das notas sherry."
+            },
+    
+            "rating": {
+                "nose": 5.0,
+                "palate": 5.0,
+                "cost": 5.0
+            }
+        },
+    
+        {
+            "name": "Deanston - Virgin Oak",
+            "region": "Highlands - Escócia",
+            "type": "Single Malt",
+            "abv": "46,3%",
+            "age": "NAS",
+            "img": "./img/DeanstonVirginOak.webp",
+            "picture": "./img/DeanstonVirginOak_Content.webp",
+            "info": "Maturado em barris ex-bourbon e carvalho americano virgem. Oleosidade média, cor natural e não passa por filtragem a frio. Um whisky divisor de opiniões, é um produto bem jovem e por isso é consideravelmente rebelde, porém ainda assim é surpreendentemente saboroso.",
+            "themeColor": "#d9dadb",
+    
+            "taste": {
+                "nose": "Majoritariamente florar com dulçor de baunilha, e um pouco de especiarias e amadeirado. No olfato não chega a ser muito rebelde.",
+                "palate": "Baunilha, mel e chocolate branco ou um chocolate ao leite, bastante cítrico, com notas de gengibre e cravo. No paladar sim o álcool é bem presente, porém não omite os sabores e nem a finalização, que é mediana.",
+                "description": "Um single malt de entrada, bem jovem. Divide opiniões, terão dias que serão dele e dias que definitivamente não. Trás a experiência do carvalho virgem com sucesso, é um tanto surpreendente a entrega de sabor e aromas ser tão boa em um whisky rebelde desse."
+            },
+    
+            "rating": {
+                "nose": 3.5,
+                "palate": 3.0,
+                "cost": 2.5
+            }
+        },
+    
+        {
+            "name": "Eagle Rare - 10 anos",
+            "region": "Kentucky - Estados Unidos",
+            "type": "Bourbon",
+            "abv": "45%",
+            "age": "10 anos",
+            "img": "./img/EagleRare10.png",
+            "picture": "./img/EagleRare10_Content.jpg",
+            "info": "Um bourbon da Buffalo Trace que recebeu 90 prêmios em 14 anos. Como todo bourbon, sua cor é natural, possui uma cremosidade mediana. Além de ter idade definida, que não é tão comum com bourbons, ele leva um pouco mais de cevada na sua composição, dando uma riqueza a mais e o destacando de outros produtos da categoria. Uma das melhores opções disponíveis no mercado nacional, e sem sombra a melhor da sua categoria, além de acessível.",
+            "themeColor": "#878181",
+    
+            "taste": {
+                "nose": "Baunilha, amadeirado, notas de cacau e algo que lembra um guaraná ou framboesa. Boa potência e muito agradável.",
+                "palate": "Traz um cítrico com uma laranja e framboesa, é um pouco seco, remete até a uma jabuticaba, suavemente doce. Finalização média com avelã e um frescor de perfume ou hortelã.",
+                "description": "Um whisky muito bom pra todo tipo de bebedor, pra quem está começando ele não agride o paladar e tem uma boa entrega de sabor, pra quem já bebe ele é diferente e um tanto complexo. Um bourbon que vai além do básico da categoria."
+            },
+    
+            "rating": {
+                "nose": 5.0,
+                "palate": 5.0,
+                "cost": 5.0
+            }
+        },
+    
+        {
+            "name": "Chivas - Extra 13 anos Oloroso",
+            "region": "Escócia",
+            "type": "Blend",
+            "abv": "40%",
+            "age": "13 anos",
+            "img": "./img/ChivasExtra13.png",
+            "picture": "./img/ChivasExtra13_Content.webp",
+            "info": "Parte maturado em barris ex-bourbon e parte em barris sherry oloroso. O fato da cor não ser natural indica que essa parcela de sherry não é muito grande, tem um corpo ralo. É um da linha especial 'Extra 13 anos' da Chivas. O sherry mais barato do mercado, porém por ser sherry, faz dele um blend de entrada com preço próximo de alguns single malts de entrada.",
+            "themeColor": "#ff2643",
+    
+            "taste": {
+                "nose": "Caramelo, baunilha e um toque de frutas vermelhas e gengibre. Não muito potente e nem muito rebelde.",
+                "palate": "Baunilha e cereja, até algo que lembra uma maçã do amor, e bem pouco de especiarias. No paladar o álcool já é bem mais agressivo, não deixa o sabor se desenvolver e quase elimina totalmente a finalização, com exceção de um amadeirado no fundo da boca que pode ser um pouco desagradável.",
+                "description": "Traz um pouco do mundo do sherry, porém em forma de blend e com o dulçor do ex-bourbon muito mais presente, isso com o sabor de álcool, que é presente, tira qualquer complexidade da bebida, e quase eliminando qualquer tipo de finalização, que é boa parte do prazer de um whisky."
+            },
+    
+            "rating": {
+                "nose": 3.0,
+                "palate": 1.5,
+                "cost": 1.5
+            }
+        },
+    
+        {
+            "name": "Johnnie Walker - Double Black",
+            "region": "Escócia",
+            "type": "Blend",
+            "abv": "40%",
+            "age": "NAS",
+            "img": "./img/JohnnieWalkerDoubleBlack.png",
+            "picture": "./img/JohnnieWalkerDoubleBlack_Content.jpg",
+            "info": "Maturado em barris ex-bourbon, sendo esses barris bastante torrados. Usa corante e é bem ralo considerando que é um turfado.",
+            "themeColor": "#dbc676",
+    
+            "taste": {
+                "nose": "O que mais se destaca são as notas do ex-bourbon e dos whiskies de grãos do blend, o defumado fica em segundo plano, não casando nada bem. Lembra o cheiro de produto de limpeza jogado em uma grelha ou chapa queimada.",
+                "palate": "Novamente o ex-bourbon e whiskies de grãos do blend são mais presentes que a turfa, além de notóriamente esse defumado originar pouco de qualquer tipo de turfa e muito mais dos barris torrados, é um gosto de queimado desagradável. Finaliza rápido, doce e amargo.",
+                "description": "Um péssimo whisky, não apenas destro da sua categoria mas no geral, a qualidade dos barris e do blend é muito baixa além de ser jovem, o cheiro incomoda e o sabor é desagradável. Não é turfado, é queimado, uma armadilha da marca."
+            },
+    
+            "rating": {
+                "nose": 0.5,
+                "palate": 1.0,
+                "cost": 0.0
+            }
+        },
+    
+        {
+            "name": "Singleton Dufftown - 12 anos",
+            "region": "Speyside - Escócia",
+            "type": "Single Malt",
+            "abv": "40%",
+            "age": "12 anos",
+            "img": "./img/SingletonDufftown12.png",
+            "picture": "./img/SingletonDufftown12_Content.jpg",
+            "info": "Maturado em barris ex-bourbon e um pouco de carvalho europeu, usa corante e passa por filtragem a frio, o corpo é mediano pra ralo pra um single malt. Produto com objetivo de ser o single malt de entrada dominante no mercado. Provavelmente e melhor opção para iniciantes.",
+            "themeColor": "#4ab7ff",
+    
+            "taste": {
+                "nose": "Simples com foco total no malte e no ex-bourbon, doce, baunilha, cereais e um pouco frutado. Bem pouco rebelde.",
+                "palate": "O principal destaque são as notas de malte, cereais, aveia, algo que lembra até um leite de soja, seguido então de notas frutadas e cítricas, como uma maça e limão, e sutilmente podem aparecer notas de café e cacau. Bem mais completo que no olfato mas nada complexo. Um pouquinho rebelde. Finalização curta, um pouco doce e picante.",
+                "description": "Um bom whisky de entrada, custa o mesmo preço, as vezes até menos, que vários blends populares, mas sendo um single malt, muito bom pra iniciantes, aqui fica evidente o que são as notas maltosas."
+            },
+    
+            "rating": {
+                "nose": 3.0,
+                "palate": 3.5,
+                "cost": 4.5
+            }
+        },
+    
+        {
+            "name": "Ballantines - 17 anos",
+            "region": "Escócia",
+            "type": "Blend",
+            "abv": "40%",
+            "age": "17 anos",
+            "img": "./img/Ballantines17.png",
+            "picture": "./img/Ballantines17_Content.jpg",
+            "info": "Um blend que leva até quase 40 whiskies na composição, vindo principalmente das destilarias Glenburgies, Glentauches e Miltonduff. Usa corante e tem uma cremosidade mediana.",
+            "themeColor": "#0a748a",
+    
+            "taste": {
+                "nose": "Extremamente suave, sem muita potência. Muito frutado e um tanto floral, levemente amadeirado, pode apresentar muito sutilmente um defumado.",
+                "palate": "Bem complexo e extremamente suave, inicia doce com baunilha e mel, evolui pra um floral e frutado com maçãs, pêra, pessego e um leve cítrico. Finaliza curto com especiarias e muito distante um defumado.",
+                "description": "Um whisky que quando você começa a beber ele não tem muito valor, é sem graça, mas quanto mais você bebe, quanto mais vazia a garrafa, mais interessante ele fica. Isso porque é uma bebida com uma boa complexidade, várias notas pra serem encontradas, mas com uma entrega baixa, você realmente precisa ir atrás dos aromas e dos sabores. Bem didático."
+            },
+    
+            "rating": {
+                "nose": 3.0,
+                "palate": 4.0,
+                "cost": 3.0
+            }
+        }
+    ]
+}
