@@ -4,17 +4,24 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://whiskylogged-api.vercel.app/products')
-            .then(res => res.json())
-            .then(catalog => {  
-                setProducts(catalog.sort((a, b) => ((b.rating.nose + b.rating.palate + b.rating.cost) / 3) - ((a.rating.nose + a.rating.palate + a.rating.cost) / 3))); 
+            .then(res => {
+                return res.json();
             })
-            .catch(err => console.error(err))
+            .then(catalog => {  
+                setIsLoading(false);
+                setProducts(catalog.sort((a, b) => ((b.rating.nose + b.rating.palate + b.rating.cost) / 3) - ((a.rating.nose + a.rating.palate + a.rating.cost) / 3)));
+            })
+            .catch(err => { 
+                setIsLoading(false);
+                console.error(err);
+            })
     }, []);
 
     return (
-        <ProductContext.Provider value={{products}}>{children}</ProductContext.Provider>
+        <ProductContext.Provider value={{products, isLoading}}>{children}</ProductContext.Provider>
     )
 }

@@ -13,12 +13,16 @@ import HeaderCatalog from './components/HeaderCatalog';
 import ProductDisplay from './containers/ProductDisplay';
 import ProductInfo from './containers/ProductInfo';
 import ProductNotFound from './containers/ProductNotFound';
+import Loader from '../../components/Loader';
 
 export default function ProductPage() {
-    const { products } = useContext(ProductContext);
+    const { products, isLoading } = useContext(ProductContext);
     const { name } = useParams();
 
     const currentProduct = products.filter(item => item.name.replace(/-|\s/g, "") === (name))[0];
+    const noProduct = () => {
+        if (isLoading) { return <Loader /> } else { return <ProductNotFound /> }
+    }
 
     setPageTheme(currentProduct);
     scrollTop(currentProduct);
@@ -38,7 +42,7 @@ export default function ProductPage() {
                                 <ProductInfo currentProduct={currentProduct} />
                             </>
                             :
-                            <ProductNotFound />
+                            noProduct()
                     }
                 </div>
             </main>
