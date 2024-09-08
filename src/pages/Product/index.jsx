@@ -8,12 +8,12 @@ import { scrollTop } from '../../scripts/scrollTop';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import HeaderCatalog from '../../components/HeaderCatalog';
+import Loader from '../../components/Loader';
 
-import HeaderCatalog from './components/HeaderCatalog';
 import ProductDisplay from './containers/ProductDisplay';
 import ProductInfo from './containers/ProductInfo';
 import ProductNotFound from './containers/ProductNotFound';
-import Loader from '../../components/Loader';
 
 export default function ProductPage() {
     const { products, isLoading } = useContext(ProductContext);

@@ -2,15 +2,15 @@ import { useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-import { ProductContext } from '../../../../contexts/ProductContext';
-import { SearchContext } from '../../../../contexts/SearchContext';
-import { FilterContext } from '../../../../contexts/FilterContext';
+import { ProductContext } from '../../contexts/ProductContext';
+import { SearchContext } from '../../contexts/SearchContext';
+import { FilterContext } from '../../contexts/FilterContext';
 
-import { filterItems } from '../../../../scripts/filterItems';
+import { filterItems } from '../../scripts/filterItems';
 
-import SearchInput from '../../../../components/SearchInput';
-import TypeSelector from '../../../../components/TypeSelector';
-import Loader from '../../../../components/Loader';
+import SearchInput from '../SearchInput';
+import TypeSelector from '../TypeSelector';
+import Loader from '../Loader';
 
 export default function HeaderCatalog({currentProduct}) {
     const {products, isLoading} = useContext(ProductContext);

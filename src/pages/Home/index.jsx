@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 import SearchInput from "../../components/SearchInput";
 import TypeSelector from "../../components/TypeSelector";
 
-import PageCatalog from "./components/PageCatalog";
+import PageCatalog from "../../components/PageCatalog";
 
 export default function HomePage() {
     const [sortBy, setSortBy] = useState(true);

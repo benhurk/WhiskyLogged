@@ -2,14 +2,14 @@ import './styles.scss';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { ProductContext } from '../../../../contexts/ProductContext';
-import { SearchContext } from '../../../../contexts/SearchContext';
-import { FilterContext } from '../../../../contexts/FilterContext';
+import { ProductContext } from '../../contexts/ProductContext';
+import { SearchContext } from '../../contexts/SearchContext';
+import { FilterContext } from '../../contexts/FilterContext';
 
-import { renderStarRatings } from '../../../../scripts/renderStarRatings';
-import { filterItems } from '../../../../scripts/filterItems';
+import { renderStarRatings } from '../../scripts/renderStarRatings';
+import { filterItems } from '../../scripts/filterItems';
 
-import Loader from '../../../../components/Loader';
+import Loader from '../Loader';
 
 export default function PageCatalog({sortBy}) {
     const {products, isLoading} = useContext(ProductContext);
