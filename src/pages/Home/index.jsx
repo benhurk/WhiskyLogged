@@ -18,7 +18,7 @@ export default function HomePage() {
     scrollTop();
 
     return (
-        <>
+        <div>
             <Header>
                 <section className='header__options'>
                     <SearchInput />
@@ -27,11 +27,9 @@ export default function HomePage() {
                 </section>
             </Header>
             <main>
-                <div className="container">
-                    <PageCatalog sortBy={sortBy} />
-                </div>
+                <PageCatalog sortBy={sortBy} />
             </main>
             <Footer />
-        </>
+        </div>
     )
 }

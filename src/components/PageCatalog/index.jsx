@@ -1,6 +1,7 @@
 import './styles.scss';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import { ProductContext } from '../../contexts/ProductContext';
 import { SearchContext } from '../../contexts/SearchContext';
@@ -15,7 +16,7 @@ export default function PageCatalog({sortBy}) {
     const {products, isLoading} = useContext(ProductContext);
     const {searchFor} = useContext(SearchContext);
     const {typeFilter} = useContext(FilterContext);
-    
+
     const searchedProducts = filterItems(products, searchFor, typeFilter);
 
     const sortedProducts = searchedProducts.sort((a, b) => {
@@ -28,36 +29,66 @@ export default function PageCatalog({sortBy}) {
         )
     })
 
+    function openTooltip(product) {
+        const tooltipEl = document.querySelector(`[data-tooltip="${product}"]`);
+        tooltipEl.classList.add('open');
+
+        const rect = tooltipEl.getBoundingClientRect();
+
+        if (rect.x + rect.width > window.innerWidth) {
+            tooltipEl.style.right = '100%';
+        } else {
+            tooltipEl.style.left = '100%';
+        }
+    }
+
+    function closeTooltip(product) {
+        const tooltipEl = document.querySelector(`[data-tooltip="${product}"]`);
+        tooltipEl.classList.remove('open');
+
+        tooltipEl.style.right = '';
+        tooltipEl.style.left = '';
+    }
+
     if (isLoading) {
         return <Loader />
     } else {
         return (
             <section className='page_catalog'>
-                {
-                    searchedProducts.length > 0
-                    ?
-                    <ul className='page_catalog__products'>
+                <div className='container'>
                     {
-                        sortedProducts.map((item) => (
-                            <li key={item.name} data-name={item.name} className='page_catalog__products-card'>
-                                <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`}>
-                                    <div className='page_catalog__products-card_img'>
-                                        <img src={item.img} alt={item.name} />
-                                    </div>
-                                    <div className='page_catalog__products-card_title'>
-                                        <h3 className='page_catalog__products-card_title-name'>{item.name}</h3>
-                                        <div className='page_catalog__products-card_title-rating'>
-                                            {renderStarRatings((item.rating.nose + item.rating.palate + item.rating.cost) / 3)}
+                        searchedProducts.length > 0
+                        ?
+                        <ul className='page_catalog__products'>
+                        {
+                            sortedProducts.map((item) => (
+                                <li 
+                                key={item.name} data-name={item.name} className='page_catalog__products-card'
+                                onMouseEnter={() => openTooltip(item.name)} onMouseLeave={() => closeTooltip(item.name)}
+                                >
+                                    <Link to={`/whisky/${item.name.replace(/-|\s/g,"")}`}>
+                                        <div className='page_catalog__products-card_img'>
+                                            <motion.img src={item.img} alt={item.name} initial={{x: '100px', opacity: 0}} animate={{x: 0, opacity: 1}} transition={{duration: 0.6, ease: 'easeInOut'}} />
                                         </div>
+                                        <div className='page_catalog__products-card_title'>
+                                            <h3 className='page_catalog__products-card_title-name'>{item.name}</h3>
+                                            <div className='page_catalog__products-card_title-rating'>
+                                                {renderStarRatings((item.rating.nose + item.rating.palate + item.rating.cost) / 3)}
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    <div className='page_catalog__products-card_tooltip' data-tooltip={item.name}>
+                                        <div className='page_catalog__products-card_tooltip-img'><img src={item.picture} alt={item.name} /></div>
+                                        <p>{item.taste.description}</p>
                                     </div>
-                                </Link>
-                            </li>
-                        ))
+                                </li>
+                            ))
+                        }
+                        </ul>
+                        :
+                        <span className='page_catalog__products-none'>Busca não encontrada.</span>
                     }
-                    </ul>
-                    :
-                    <span className='page_catalog__products-none'>Busca não encontrada.</span>
-                }
+                </div>
             </section>
         )
     }

@@ -1,5 +1,6 @@
-import { useRef, useContext } from 'react';
 import './styles.scss';
+import { useRef, useContext } from 'react';
+import { motion } from 'framer-motion';
 
 import { renderStarRatings } from '../../../../scripts/renderStarRatings';
 
@@ -7,7 +8,7 @@ export default function Product({currentProduct}) {
     const ratingExpand = useRef();
 
     return(
-        <div className='product_display'>
+        <motion.div className='product_display' initial={{x: '360px', opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x: '-360px', opacity: 0}} transition={{duration: 0.6, ease: 'easeInOut'}}>
             <div className='product_display__rating'>
                 <div className='product_display__rating--main' onMouseOver={() => ratingExpand.current.classList.add('open')} onMouseOut={() => ratingExpand.current.classList.remove('open')}>
                     {renderStarRatings((currentProduct.rating.nose + currentProduct.rating.palate + currentProduct.rating.cost) / 3)}
@@ -59,6 +60,6 @@ export default function Product({currentProduct}) {
                     </ul>
                 </li>
             </ul>
-        </div>
+        </motion.div>
     )
 }

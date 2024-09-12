@@ -11,6 +11,7 @@
         }
 
         &-card {
+            position: relative;
             width: min-content;
             margin-inline: auto;
             text-align: center;
@@ -78,7 +79,49 @@
                     font-size: 0.8rem;
                 }
             }
+
+            &_tooltip {
+                display: flex;
+                width: 360px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background-color: #fff;
+                z-index: 10;
+                pointer-events: none;
+                opacity: 0;
+                
+                &.open {
+                    opacity: 1;
+                    transition: 0.25s ease-in;
+                }
+
+                &-img {
+                    position: relative;
+                    width: 35%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                p {
+                    width: 65%;
+                    color: #000;
+                    text-align: left;
+                    padding: 6px;
+                    line-height: 14px;
+                    font-size: 14px;
+                    align-self: center;
+                    max-height: 90%;
+                    overflow-y: hidden;
+                }
+            }
         }
+
 
         &-none {
             opacity: .75;

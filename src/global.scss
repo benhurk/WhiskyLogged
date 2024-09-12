@@ -13,6 +13,8 @@ body {
     font-family: var(--main-font);
     color: #fff;
     background-color: var(--dark);
+
+    overflow-x: hidden;
 }
 
 #root {
