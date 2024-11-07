@@ -13,14 +13,14 @@ body {
     font-family: var(--main-font);
     color: #fff;
     background-color: var(--dark);
-
-    overflow-x: hidden;
 }
 
 #root {
+    position: relative;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    overflow-x: hidden;
 
     @media (max-width: 1024px) {
         display: flex;
