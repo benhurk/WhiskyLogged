@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { ProductContext } from '../../contexts/ProductContext';
@@ -24,8 +24,11 @@ export default function ProductPage() {
         if (isLoading) { return <Loader /> } else { return <ProductNotFound /> }
     }
 
+    useEffect(() => {
+        scrollTop();
+    }, [currentProduct]);
+
     setPageTheme(currentProduct);
-    scrollTop(currentProduct);
 
     return (
         <>
