@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ProductContext } from '../../contexts/ProductContext';
@@ -16,6 +16,12 @@ export default function PageCatalog({sortBy}) {
     const {searchFor} = useContext(SearchContext);
     const {typeFilter} = useContext(FilterContext);
 
+    const [pageNumber, setPageNumber] = useState(0);
+
+    useEffect(() => {
+        setPageNumber(0);
+    }, [typeFilter, searchFor]);
+
     const searchedProducts = filterItems(products, searchFor, typeFilter);
 
     const sortedProducts = searchedProducts.sort((a, b) => {
@@ -27,6 +33,22 @@ export default function PageCatalog({sortBy}) {
             ((a.rating.nose + a.rating.palate + a.rating.cost) / 3) - ((b.rating.nose + b.rating.palate + b.rating.cost) / 3)
         )
     })
+
+    const productsPerPage = 6;
+    const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
+    const pagesVisited = pageNumber * productsPerPage;
+
+    const displayProducts = sortedProducts.slice(pagesVisited, pagesVisited + productsPerPage);
+
+    function renderPaginationButtons(totalPages) {
+        let buttons = [];
+
+        for (let i = 0; i < totalPages; i++) {
+            buttons.push(<button key={i} type='button' className={`page_catalog__pagination_btn--num ${i === pageNumber ? 'current' : ''}`} onClick={() => setPageNumber(i)}>{i + 1}</button>);
+        }
+
+        return buttons;
+    }
 
     function openTooltip(product) {
         const tooltipEl = document.querySelector(`[data-tooltip="${product}"]`);
@@ -60,7 +82,7 @@ export default function PageCatalog({sortBy}) {
                         ?
                         <ul className='page_catalog__products'>
                         {
-                            sortedProducts.map((item) => (
+                            displayProducts.map((item) => (
                                 <li 
                                 key={item.name} data-name={item.name} className='page_catalog__products-card'
                                 onMouseEnter={() => openTooltip(item.name)} onMouseLeave={() => closeTooltip(item.name)}
@@ -87,6 +109,13 @@ export default function PageCatalog({sortBy}) {
                         :
                         <span className='page_catalog__products-none'>Busca não encontrada.</span>
                     }
+                    <div className='page_catalog__pagination'>
+                        <div className='page_catalog__pagination_buttons'>
+                            <button type='button' className='page_catalog__pagination_btn--arrow bi bi-chevron-left' disabled={pageNumber === 0 ? true : false} onClick={() => setPageNumber(pageNumber - 1)} />
+                            {renderPaginationButtons(totalPages)}
+                            <button type='button' className='page_catalog__pagination_btn--arrow bi bi-chevron-right' disabled={pageNumber === totalPages - 1 ? true : false} onClick={() => setPageNumber(pageNumber + 1)} />
+                        </div>
+                    </div>
                 </div>
             </section>
         )
